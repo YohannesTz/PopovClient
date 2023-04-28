@@ -10,10 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.github.yohannestz.popovclient.ui.screens.EnterBotIdScreen
-import com.github.yohannestz.popovclient.ui.screens.GetStartedScreen
 import com.github.yohannestz.popovclient.ui.screens.HomeScreen
 import com.github.yohannestz.popovclient.ui.theme.PopovClientTheme
 
@@ -27,7 +24,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navController = rememberNavController()
-                    HomeScreen(navController = navController)
+
+                    HomeScreen()
                 }
             }
         }
