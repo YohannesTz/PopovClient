@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.airbnb.lottie.compose.LottieAnimation
@@ -24,7 +25,7 @@ import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.github.yohannestz.popovclient.R
 import com.github.yohannestz.popovclient.ui.screens.components.ImageWithTwoTextListItem
-import com.github.yohannestz.popovclient.ui.screens.components.TwoTextListItem
+import com.github.yohannestz.popovclient.ui.theme.PopovClientTheme
 
 @Composable
 fun AppsScreen() {
@@ -68,9 +69,18 @@ fun AppsScreen() {
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 8.dp),
                     title = "Device Name",
-                    subTitle = "Pixle 4"
+                    subTitle = "Pixel 4",
+                    imageResourceId = R.drawable.android_icon
                 )
             }
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun AppsScreenPreview() {
+    PopovClientTheme {
+        AppsScreen()
     }
 }

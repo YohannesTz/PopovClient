@@ -3,6 +3,7 @@ package com.github.yohannestz.popovclient.ui.screens
 import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -24,7 +25,11 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.github.yohannestz.popovclient.R
 import com.github.yohannestz.popovclient.ui.navigation.TabItem
+import com.github.yohannestz.popovclient.ui.screens.components.ImageWithThreeTextListItem
+import com.github.yohannestz.popovclient.ui.screens.components.ImageWithTwoTextListItem
+import com.github.yohannestz.popovclient.ui.screens.components.TwoTextListItem
 import com.github.yohannestz.popovclient.ui.theme.PopovClientTheme
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
@@ -89,20 +94,58 @@ fun TabsContent(tabs: List<TabItem>, pagerState: PagerState) {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun ReportScreenPreview() {
-    PopovClientTheme {
-        ReportScreen()
-    }
-}
-
 @Composable
 fun CallList() {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        Text(text = "Calls screen")
+        ImageWithThreeTextListItem(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp),
+            title = "dasfasdf",
+            subTitle = "asdfasdf",
+            imageResourceId = R.drawable.call_incoming,
+            size = 50.dp,
+            horizontalPadding = 4.dp,
+            thirdText = "10s"
+        )
+
+        ImageWithThreeTextListItem(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp),
+            title = "dasfasdf",
+            subTitle = "asdfasdf",
+            imageResourceId = R.drawable.call_missed,
+            size = 50.dp,
+            horizontalPadding = 4.dp,
+            thirdText = "10s"
+        )
+
+        ImageWithThreeTextListItem(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp),
+            title = "dasfasdf",
+            subTitle = "asdfasdf",
+            imageResourceId = R.drawable.call_outgoing,
+            size = 50.dp,
+            horizontalPadding = 4.dp,
+            thirdText = "10s"
+        )
+
+        ImageWithThreeTextListItem(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp),
+            title = "dasfasdf",
+            subTitle = "asdfasdf",
+            imageResourceId = R.drawable.call_outgoing,
+            size = 50.dp,
+            horizontalPadding = 0.dp,
+            thirdText = "10s"
+        )
     }
 }
 
@@ -111,6 +154,41 @@ fun MessagesList() {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        Text(text = "Messages screen")
+        TwoTextListItem(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp),
+            title = "No Name", subTitle = "Hi this is a sample text"
+        )
+        TwoTextListItem(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp), title = "No Name", subTitle = "Hi this is a sample text"
+        )
+        TwoTextListItem(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp), title = "No Name", subTitle = "Hi this is a sample text"
+        )
+
+        TwoTextListItem(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp), title = "No Name", subTitle = "Hi this is a sample text"
+        )
+
+        TwoTextListItem(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp), title = "No Name", subTitle = "Hi this is a sample text"
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ReportScreenPreview() {
+    PopovClientTheme {
+        ReportScreen()
     }
 }
